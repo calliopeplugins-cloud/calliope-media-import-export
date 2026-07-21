@@ -40,4 +40,4 @@ The WordPress.org changelog remains in eadme.txt when present. CHANGELOG.md in 
 
 - Plugin catalog: https://pluginswordpress.calliope.com.ar/
 - Institutional site: https://calliope.com.ar/
-- Technical contact: calliopeplugins@gmail.com
+- Technical contact: contacto@calliope.com.ar

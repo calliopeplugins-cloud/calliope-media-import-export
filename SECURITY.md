@@ -2,7 +2,7 @@
 
 Please do not report security vulnerabilities as public GitHub issues.
 
-Send security reports privately to calliopeplugins@gmail.com and include:
+Send security reports privately to contacto@calliope.com.ar and include:
 
 - affected plugin and version;
 - WordPress, PHP, and WooCommerce versions when relevant;
