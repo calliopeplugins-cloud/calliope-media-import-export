@@ -12,7 +12,7 @@ CSV export/import for your media library with preview, batch processing, duplica
 
 ## Edition
 
-This repository contains the Free edition code selected for private GitHub import and review. It can be considered for public visibility only after a separate audit and explicit approval.
+This repository contains the Free edition code selected for GitHub publication. Distribution artifacts should be created only through the official CalliopeWP release process.
 
 ## Requirements
 
