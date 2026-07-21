@@ -1,0 +1,46 @@
+# Local environment
+.env
+.env.*
+wp-config.php
+*.local
+
+# Logs and reports
+*.log
+debug.log
+error_log
+coverage/
+reports/
+
+# Archives and generated packages
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+
+# Databases
+*.sql
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+cache/
+backups/
+backup/
+old/
+copies/
+__MACOSX/
+.DS_Store
+Thumbs.db
+
+# Dependencies generated locally
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+
+# VCS metadata from imports
+.svn/

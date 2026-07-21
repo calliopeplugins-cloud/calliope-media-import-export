@@ -1,0 +1,64 @@
+name: Plugin Checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  php:
+    name: PHP ${{ matrix.php-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: [ '7.4', '8.3' ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+          tools: none
+
+      - name: Validate plugin structure
+        shell: bash
+        run: |
+          test -f "export-import-media.php"
+          grep -q "Plugin Name:" "export-import-media.php"
+          grep -q "Version:[[:space:]]*1.7.28" "export-import-media.php"
+          grep -q "Text Domain:[[:space:]]*calliope-media-import-export" "export-import-media.php"
+
+      - name: Check for forbidden files
+        shell: bash
+        run: |
+          forbidden=$(find . \
+            -path './.git' -prune -o \
+            -path './node_modules' -prune -o \
+            -path './coverage' -prune -o \
+            -path './reports' -prune -o \
+            -path './tmp' -prune -o \
+            -path './temp' -prune -o \
+            -path './cache' -prune -o \
+            -type f \( \
+              -name '*.zip' -o -name '*.rar' -o -name '*.7z' -o -name '*.tar' -o -name '*.tar.gz' -o \
+              -name '*.sql' -o -name '*.sqlite' -o -name '*.log' -o -name 'debug.log' -o -name 'error_log' -o \
+              -name '.env' -o -name '.env.*' -o -name 'wp-config.php' \
+            \) -print)
+          if [ -n "$forbidden" ]; then
+            echo "Forbidden files found:"
+            echo "$forbidden"
+            exit 1
+          fi
+
+      - name: PHP syntax
+        shell: bash
+        run: |
+          find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
