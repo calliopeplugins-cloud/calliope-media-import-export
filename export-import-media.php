@@ -6,7 +6,7 @@ Version: 1.7.28
 Requires at least: 5.6
 Requires PHP: 7.4
 Author: CalliopeWP
-Author URI: https://pluginswordpress.calliope.com.ar/
+Author URI: https://calliopewp.com/
 License: GPLv2 or later
 Text Domain: calliope-media-import-export
 Domain Path: /languages
