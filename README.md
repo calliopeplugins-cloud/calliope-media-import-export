@@ -44,7 +44,7 @@ The `main` branch contains the validated Free edition codebase for version 1.7.2
 
 ## Documentation
 
-Read the [Export/Import Media documentation](https://pluginswordpress.calliope.com.ar/export-import-media/) for the product guide and Free/Pro scope. The WordPress.org metadata, FAQ, screenshots, and changelog remain in `readme.txt`.
+Read the [Export/Import Media documentation](https://calliopewp.com/export-import-media/) for the product guide and Free/Pro scope. The WordPress.org metadata, FAQ, screenshots, and changelog remain in `readme.txt`.
 
 ## WordPress.org
 
@@ -66,4 +66,4 @@ Export/Import Media is licensed under GPLv2 or later. See `readme.txt` for the W
 
 ## About CalliopeWP
 
-CalliopeWP is the WordPress plugin line developed by Estudio Calliope from Rosario, Santa Fe, Argentina. Explore the [CalliopeWP plugin catalog](https://pluginswordpress.calliope.com.ar/) and [Estudio Calliope](https://calliope.com.ar/).
+CalliopeWP is the WordPress plugin line developed by Estudio Calliope from Rosario, Santa Fe, Argentina. Explore the [CalliopeWP plugin catalog](https://calliopewp.com/) and [Estudio Calliope](https://calliope.com.ar/).
